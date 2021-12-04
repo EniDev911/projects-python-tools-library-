@@ -7,7 +7,7 @@ print('Bienvenido a la herramienta de búsqueda en Google\n\n')
 consulta = input("¿Qué quieres buscar en google?:\n")
 print()
 # Iterando en el rango de resultado
-for i in search(consulta, start=0, stop=8):
+for i in search(consulta, start=0, stop=10):
 	print(i)
 print()
 print()
