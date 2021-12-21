@@ -1,13 +1,19 @@
 from googlesearch import search
 
 
-print('Bienvenido a la herramienta de búsqueda en Google\n\n')
+print('Welcome to the Google search tools\n\n')
 
-# Pidiendo la consulta
-consulta = input("¿Qué quieres buscar en google?:\n")
+
+query = input("What do you want to google:\n")
+results = []
 print()
-# Iterando en el rango de resultado
-for i in search(consulta, start=0, stop=10):
+# Iterating the results
+for i in search(query, start=0, stop=10):
 	print(i)
-print()
+	results.append(i)
+
+	with open('results.txt', 'w+') as xfile:
+		for j in results:
+			xfile.write('%s\n' % j)
+
 print()
